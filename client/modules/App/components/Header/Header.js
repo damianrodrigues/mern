@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 import styles from './Header.css';
 
 // Import Components
-import { Navbar, Nav, NavItem, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
 // Import Images
 import logo from '../../../../assets/images/react-logo.png';
@@ -41,16 +41,12 @@ export function Header(props, context) {
               </Nav>
               :
               <Nav>
-                <NavItem>
-                  <Link className="nav-link" to="/register" >
+                <Nav.Link as={Link} to="/register" >
                     Register
-                  </Link>
-                </NavItem>
-                <NavItem>
-                  <Link className="nav-link" to="/login">
+                </Nav.Link>
+                <Nav.Link as={Link} to="/login">
                     Login
-                  </Link>
-                </NavItem>
+                </Nav.Link>
               </Nav>
           }
         </Navbar.Collapse>
