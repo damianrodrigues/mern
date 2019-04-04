@@ -16,6 +16,11 @@
     "slate": "rimraf node_modules && npm install",
     "lint": "eslint client server"
   },
+  "browserslist": [
+    ">0.5%",
+    "not ie <= 10",
+    "not op_mini all"
+  ],
   "pre-commit": [
     "lint",
     "test"
